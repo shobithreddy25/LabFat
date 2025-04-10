@@ -1,7 +1,7 @@
 ## Section 1: Random Names
-  -shobith
-  -vaishnavi
-  -nitheesh
+  - shobith
+  - vaishnavi
+  - nitheesh
 
 
 ## Section 2: Useful Tips
