@@ -11,14 +11,28 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # Step 1: Check out the repository
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Generate TOC for Markdown files
-        uses: technote-space/markdown-toc@v3
+      # Step 2: Set up Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
         with:
-          file_glob: 'docs/**/*.md'
+          node-version: '18'
 
+      # Step 3: Install markdown-toc package
+      - name: Install markdown-toc
+        run: npm install -g markdown-toc
+
+      # Step 4: Generate TOC for all Markdown files
+      - name: Generate TOC
+        run: |
+          for file in $(find docs -name "*.md"); do
+            markdown-toc -i "$file"
+          done
+
+      # Step 5: Commit and push changes
       - name: Commit and push changes
         run: |
           git config --global user.name "GitHub Actions Bot"
