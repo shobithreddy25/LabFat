@@ -1,9 +1,9 @@
-##Courses
+## Courses
 -Application development deployment architecture
 -Machine Learning
 -Soft computing
 
-##Food
+## Food
 -Biryani
 -Chicken tikka masala
 -Kebab
