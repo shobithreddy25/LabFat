@@ -1,4 +1,3 @@
-
 ## Section 1: Random Names
 -shobith
 -vaishnavi
